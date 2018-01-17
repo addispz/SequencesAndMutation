@@ -194,6 +194,7 @@ def index_of_largest_number(numbers, n):
             index_of_max = k
     return index_of_max
 
+
 # ----------------------------------------------------------------------
 # Some problems iterate (loop) through the sequence accessing TWO
 # (or more) places in the sequence AT THE SAME ITERATION, like these:
@@ -322,7 +323,7 @@ def is_palindrome(s):
       :type s: str
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     ####################################################################
@@ -332,9 +333,9 @@ def is_palindrome(s):
     ####################################################################
     # ------------------------------------------------------------------
     for k in range(len(s)):
-        if s[((len(s) - k) - 1)] == s[k]:
-            return True
-    return False
+        if not s[((len(s) - k) - 1)] == s[k]:
+            return False
+    return True
 
 # ----------------------------------------------------------------------
 # Some problems loop (iterate) through two or more sequences
